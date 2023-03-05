@@ -1,0 +1,192 @@
+@import "config/fonts.scss";
+@import "config/easings.scss";
+
+.sun {
+    background: radial-gradient(circle at 40%, rgba(51, 51, 51, 0.2), rgba(51, 51, 51, 0.2) 50%, rgba(238, 238, 238, 0.151) 75%, rgba(51, 51, 51, 0.233) 75%), rgb(255, 230, 0);
+    /* box-shadow: 0px 0px 6px 6px #494949; */
+}
+
+.sun-wrapper {
+    z-index: 20;
+}
+
+.moon {
+    background: radial-gradient(circle at 40%, rgba(51, 51, 51, 0.4), rgba(51, 51, 51, 0.3) 50%, rgba(238, 238, 238, 0.151) 75%, rgba(51, 51, 51, 0.233) 75%), rgb(78, 140, 211);
+}
+
+.firstname-wrapper, .lastname-wrapper {
+    clip-path: circle(68%);
+}
+
+/* .c-loader {
+    mask: url(/images/nature-sprite.png);
+    -webkit-mask: url(/images/nature-sprite.png);
+    mask-size: 2300% 100%;
+    animation: mask-play 1.7s steps(22) forwards;
+    animation-delay: 3.8s;
+    overflow: hidden;
+} */
+
+.c-loader {
+    mask: url(/images/nature-sprite-2.png);
+    mask-size: 7100% 100%;
+    /* mask: url(/images/nature-sprite.png);
+    mask-size: 2300% 100%; */
+
+    @apply
+        bg-neutral
+    ;
+}
+
+.c-loader.-hide {
+    animation: mask-play 1.4s steps(70) forwards;
+    /* animation: mask-play 1.7s steps(22) forwards; */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+@keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+                mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+    }
+}
+
+.link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2.5rem 23px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+}
+
+.c-grid {
+    position: relative;
+    z-index: 102;
+}
+
+.h1 {
+    font-size: 6rem;
+}
+
+.text {
+    margin-top: 0.2rem;
+    line-height: 1rem;
+}
+
+.link img {
+    display: none;
+}
+
+.c-button {
+    background-color: white;
+    transition: 0.3s background-color ease-out;
+    border: 2px solid #333;
+
+    &:hover {
+        background-color: #333;
+        color: white;
+    }
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.3s opacity ease-out;
+
+    &.-blur {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.c-marker {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s opacity ease-out;
+    
+    &.-open {
+        opacity: 1;
+        pointer-events: initial;
+    }
+}
+
+.c-books {
+    opacity: 0;
+
+    .c-grid {
+        filter: blur(0px);
+        transition: 0.6s filter ease-out;
+    }
+
+    &.-blur {
+        .c-grid {
+            filter: blur(10px);
+            pointer-events: none;
+        }
+    }
+}
+
+.c-panel {
+    transform: translate3d(0, 0, 0);
+    transition: 1.7s transform $easeOutExpo;
+
+    &.-open {
+        opacity: 1;
+        transition: 1.3s transform $easeOutExpo;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.c-books-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+
+    &.-tome1 {
+        background-image: url(/images/background-tome-1.jpg);
+        /* filter: blur(100px); */
+
+        &.-show {
+            opacity: 0.8;
+        }
+    }
+    &.-tome2 {
+        background-image: url(/images/background-tome-2.jpg);
+        /* filter: blur(100px); */
+
+        &.-show {
+            opacity: 0.8;
+        }
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

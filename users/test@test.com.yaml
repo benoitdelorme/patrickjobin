@@ -1,0 +1,8 @@
+name: Ben
+super: true
+id: e0d6d9a3-b8b1-4b04-892a-b97240e572f4
+password_hash: $2y$10$nMlmNK3uxzCDm.6VPXRpYeS4vyQ1lOH7BFPozLBLCGBkwxkyiKf1y
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing

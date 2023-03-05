@@ -1,0 +1,322 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          localizable: false
+          validate:
+            - required
+      -
+        handle: books
+        field:
+          collapse: false
+          previews: true
+          sets:
+            book:
+              display: Book
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: subtitle
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Subtitle
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: description
+                  field:
+                    antlers: false
+                    display: Description
+                    type: textarea
+                    icon: textarea
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: cover
+                  field:
+                    mode: list
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Cover
+                    type: assets
+                    icon: assets
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - image
+                -
+                  handle: text_button_1
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Text Button 1'
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: link_button_1
+                  field:
+                    display: 'Link Button 1'
+                    type: link
+                    icon: link
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: text_button_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Text button 2'
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: link_button_2
+                  field:
+                    display: 'Link button 2'
+                    type: link
+                    icon: link
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: comments
+                  field:
+                    collapse: false
+                    previews: true
+                    sets:
+                      new_set:
+                        display: 'New Set'
+                        fields:
+                          -
+                            handle: image_comment
+                            field:
+                              mode: list
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: 'Image comment'
+                              type: assets
+                              icon: assets
+                              localizable: false
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              validate:
+                                - image
+                    display: Comments
+                    type: replicator
+                    icon: replicator
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+          display: Books
+          type: replicator
+          icon: replicator
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: patrick_jobin_edition
+        field:
+          display: 'Patrick Jobin Edition'
+          type: section
+          icon: section
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: patrick_jobin_edition_description
+        field:
+          antlers: false
+          display: 'Patrick Jobin Edition Description'
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: patrick_jobin_edition_email
+        field:
+          display: 'Patrick Jobin Edition email'
+          type: link
+          icon: link
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: locations
+        field:
+          display: Locations
+          type: section
+          icon: section
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: locations_list
+        field:
+          collapse: false
+          previews: true
+          sets:
+            location:
+              display: location
+              fields:
+                -
+                  handle: locations_list_image
+                  field:
+                    mode: list
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Locations List Image'
+                    type: assets
+                    icon: assets
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - image
+                    container: assets
+                -
+                  handle: locations_list_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Locations List Title'
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: locations_list_address
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Locations List Address'
+                    type: text
+                    icon: text
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                -
+                  handle: locations_list_link
+                  field:
+                    display: 'Locations List Link'
+                    type: link
+                    icon: link
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+          display: 'Locations List'
+          type: replicator
+          icon: replicator
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: about
+        field:
+          display: About
+          type: section
+          icon: section
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: about_photo
+        field:
+          mode: list
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'About Photo'
+          type: assets
+          icon: assets
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - image
+      -
+        handle: about_description
+        field:
+          antlers: false
+          display: 'About Description'
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+title: Page
