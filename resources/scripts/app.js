@@ -17,6 +17,8 @@ class App {
         this.DOM.tome1 = document.querySelector('.c-panel.-tome1')
         this.DOM.tome2 = document.querySelector('.c-panel.-tome2')
 
+        this.DOM.closePanel = document.querySelectorAll('.c-panel_close')
+
         
         this.DOM.closeMarker = document.querySelector('.c-marker_close-marker')
         this.DOM.markerContainer = document.querySelector('.c-marker')
@@ -30,7 +32,6 @@ class App {
 
     events() {
         document.querySelectorAll('.link').forEach((item) =>  {
-            console.log(item.getAttribute('data-background'))
 
             item.addEventListener('mouseenter', () => {
                 document.querySelectorAll('.link').forEach((item) =>  {
@@ -63,8 +64,18 @@ class App {
             document.querySelectorAll('.c-panel').forEach((panel) => {
                 panel.classList.remove('-open')
             })
+        })
 
-            /* document.querySelector('canvas').classList.remove('-blur') */
+        this.DOM.closePanel.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                this.DOM.books.classList.remove('-blur')
+
+                document.querySelectorAll('.c-panel').forEach((panel) => {
+                    panel.classList.remove('-open')
+                })
+            })
         })
 
         this.DOM.author.addEventListener('click', (e) => {

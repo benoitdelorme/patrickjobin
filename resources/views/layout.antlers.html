@@ -4,21 +4,31 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Les éditions Patrick Jobin</title>
+        <meta name="description" content="Ayant choisi l’autoédition, j’ai fondé les Éditions Patrick Jobin afin de faciliter la distribution de mes propres livres. J’y trouve dans cette forme, la liberté et toute l’autonomie recherchée. Par ailleurs, je dois bien avouer qu’il y avait là aussi un certain plaisir de relever un défi colossal d’ainsi me voir distribué un peu partout à l’échelle du Québec et peut-être même la France et d’autres régions du monde. Certes un rêve fou, mais une aventure palpitante.">
+        <meta property="og:title" content="Les éditions Patrick Jobin">
+        <meta property="og:description" content="Ayant choisi l’autoédition, j’ai fondé les Éditions Patrick Jobin afin de faciliter la distribution de mes propres livres. J’y trouve dans cette forme, la liberté et toute l’autonomie recherchée. Par ailleurs, je dois bien avouer qu’il y avait là aussi un certain plaisir de relever un défi colossal d’ainsi me voir distribué un peu partout à l’échelle du Québec et peut-être même la France et d’autres régions du monde. Certes un rêve fou, mais une aventure palpitante.">
+        <meta property="og:type" content="book">
 
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-        <link rel="icon" type="image/png" href="/images/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/fav/site.webmanifest">
+        <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
         {{ stack:scripts }}
         {{ vite src="resources/scripts/app.js" }}
     </head>
     <body>
         <div class="c-loader h-full w-full fixed top-0 left-0 z-[10000] bg-white flex flex-col justify-center items-center">
+            <div class="c-edition-loader absolute text-center leading-none top-10 left-[50%] translate-x-[-50%]">
+                <div class="c-edition-loader_text1 text-[18px] font-semibold">Les Éditions Patrick Jobin</div>
+                <div class="c-edition-loader_text2 text-[15px]">présente</div>
+            </div>
             <div class="relative">
-                <div class="absolute h-[300px] w-[100%] bottom-[calc(100%-106px)] overflow-hidden">
-                    <div class="sun-wrapper relative left-[10%] w-[40%] top-[100%] origin-right">
-                        <div class="sun w-[80px] h-[80px] rounded-full"></div>
-                    </div>
-                </div>
-                <h1 class="relative text-neutral text-5xl leading-[1.2em] font-writter font-light z-10 overflow-hidden">
+                <h1 class="relative text-neutral text-xl md:text-5xl leading-[1.2em] font-writter font-light z-10 overflow-hidden">
                     <span class="relative leading-none">
                         <span class="firstname-wrapper relative leading-none inline-block">
                             <span class="firstname relative leading-none inline-block">Patrick</span>
@@ -28,12 +38,7 @@
                         </span>
                     </span>
                 </h1>
-                <p class="author text-neutral text-center text-xl mt-[-10px]">Auteur</p>
-                <div class="absolute h-[300px] w-[100%] top-[calc(100%-160px)] overflow-hidden">
-                    <div class="moon-wrapper relative left-[10%] w-[40%] top-[-80px] origin-right">
-                        <div class="moon w-[80px] h-[80px] rounded-full"></div>
-                    </div>
-                </div>
+                <p class="author text-neutral text-center text-sm md:text-xl md:mt-[-10px]">Auteur</p>
             </div>
             <button class="c-button enter cursor-pointer text-black mt-10 px-8 py-2 border-2 opacity-0 relative z-10 overflow-hidden rounded-lg">
                 <span>Bienvenue</span>

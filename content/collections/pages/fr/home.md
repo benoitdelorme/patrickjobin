@@ -3,7 +3,7 @@ id: ea0a8e75-62f5-4680-89dc-a4bd7ece8306
 blueprint: page
 title: Home
 updated_by: e0d6d9a3-b8b1-4b04-892a-b97240e572f4
-updated_at: 1678027623
+updated_at: 1678030717
 template: default
 books:
   -
@@ -50,6 +50,14 @@ patrick_jobin_edition_description: |-
   Merci de votre support et de vos encouragements! Patrick Jobin
 patrick_jobin_edition_email: 'mailto:patrick@gmail.com'
 locations_list:
+  -
+    id: levk1nwo
+    locations_list_image: amazon_icon.svg.png
+    locations_list_title: Commande
+    locations_list_address: 'Disponible <br> en ligne'
+    locations_list_link: 'https://www.amazon.ca/s?i=stripbooks&rh=p_27%3AM+Patrick+Jobin&s=relevancerank&language=fr&text=M+Patrick+Jobin&ref=dp_byline_sr_book_1'
+    type: location
+    enabled: true
   -
     id: levhm85t
     locations_list_image: chiado.jpeg
