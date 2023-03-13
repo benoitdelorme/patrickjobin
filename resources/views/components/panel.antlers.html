@@ -1,0 +1,29 @@
+<div data-panel="{{ dataPanel }}" class="c-panel {{ dataPanel }} shadow-lg overflow-auto fixed z-[110] px-4 py-4 md:px-10 md:py-10 flex justify-start items-start flex-col left-[100%] top-0 h-full w-full md:w-[500px] bg-white">
+    <h2 class="hidden md:block mb-5 text-bold text-[22px] font-semibold">{{ bookTitle }}</h2>
+    <a href="/close" class="c-panel_close cursor-pointer inline-block absolute h-[20px] w-[20px] top-[27px] md:hidden right-5">
+        <div class="relative top-[2px] h-[2px] w-[20px] bg-neutral rotate-[-45deg]"></div>
+        <div class="relative h-[2px] w-[20px] bg-neutral rotate-45"></div>
+    </a>
+    <p class="text-justify leading-[normal]">
+        <img
+            class="w-[80%] md:w-[200px] mx-auto md:mx-[initial] md:float-left md:pr-5" 
+            src="{{ bookCover }}" 
+            alt="{{ bookTitle }}" 
+        />
+        {{ bookDescription }}
+    </p>
+    <a target="_blank" href="{{ bookLinkButton1 }}" class="c-button rounded-lg min-h-[45px] block w-full cursor-pointer text-black mt-5 px-8 py-2 border-2 text-center relative z-10 overflow-hidden">
+        <span>{{ bookTextButton1 }}</span>
+    </a>
+    <a target="_blank" href="{{ bookLinkButton2 }}" class="c-button rounded-lg min-h-[45px] block w-full cursor-pointer text-black mt-2 px-8 py-2 border-2 text-center relative z-10 overflow-hidden">
+        <span>{{ bookTextButton2 }}</span>
+    </a>
+    <h2 class="mt-10 mb-2 font-semibold text-[22px]">Commentaires</h2>
+    <div class="comment flex flex-wrap">
+        {{ bookComments }}
+            <div class="h-[80px] w-[80px] cursor-pointer overflow-hidden mr-2 mb-2 border-2 border-neutral rounded-lg">
+                <img data-gallery-image="{{ image_comment.url }}" data-gallery-text="" src="{{ image_comment.url }}" alt="{{ alt }}" class="w-full h-full object-cover object-center">
+            </div>
+        {{ /bookComments }}
+    </div>
+</div>

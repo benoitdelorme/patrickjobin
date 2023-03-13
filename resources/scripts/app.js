@@ -19,11 +19,7 @@ class App {
 
         this.DOM.closePanel = document.querySelectorAll('.c-panel_close')
 
-        
-        this.DOM.closeMarker = document.querySelector('.c-marker_close-marker')
         this.DOM.markerContainer = document.querySelector('.c-marker')
-
-        
 
         this.events()
         this.initGallery1()
@@ -44,13 +40,14 @@ class App {
             item.addEventListener('click', (e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                this.DOM.books.classList.add('-blur')
+
+                this.DOM.books.classList.add("-open")
+                this.DOM.books.classList.add("-animals")
                 
                 document.querySelectorAll('.c-panel').forEach((panel) => {
                     panel.classList.remove('-open')
                 })
 
-                /* document.querySelector('canvas').classList.add('-blur') */
                 document.querySelector(`[data-panel='${item.getAttribute('data-background')}']`).classList.add('-open')
             })
         })
@@ -58,11 +55,16 @@ class App {
         this.DOM.books.addEventListener('click', (e) => {
             e.preventDefault()
             e.stopPropagation()
-
-            this.DOM.books.classList.remove('-blur')
+            
+            this.DOM.books.classList.remove('-open')
+            this.DOM.books.classList.remove("-animals")
 
             document.querySelectorAll('.c-panel').forEach((panel) => {
                 panel.classList.remove('-open')
+            })
+
+            document.querySelectorAll('.c-popup').forEach((popup) => {
+                popup.classList.remove('-open')
             })
         })
 
@@ -70,10 +72,15 @@ class App {
             item.addEventListener('click', (e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                this.DOM.books.classList.remove('-blur')
+                this.DOM.books.classList.remove('-open')
+                this.DOM.books.classList.remove("-animals")
 
                 document.querySelectorAll('.c-panel').forEach((panel) => {
                     panel.classList.remove('-open')
+                })
+
+                document.querySelectorAll('.c-popup').forEach((popup) => {
+                    popup.classList.remove('-open')
                 })
             })
         })
@@ -82,10 +89,15 @@ class App {
             e.preventDefault()
             e.stopPropagation()
 
-            this.DOM.books.classList.add('-blur')
+            this.DOM.books.classList.add("-open")
+            this.DOM.books.classList.remove("-animals")
             
             document.querySelectorAll('.c-panel').forEach((panel) => {
                 panel.classList.remove('-open')
+            })
+
+            document.querySelectorAll('.c-popup').forEach((popup) => {
+                popup.classList.remove('-open')
             })
 
             document.querySelector(`[data-panel='${this.DOM.author.getAttribute('data-background')}']`).classList.add('-open')
@@ -95,10 +107,15 @@ class App {
             e.preventDefault()
             e.stopPropagation()
 
-            this.DOM.books.classList.add('-blur')
+            this.DOM.books.classList.add("-open")
+            this.DOM.books.classList.remove("-animals")
             
             document.querySelectorAll('.c-panel').forEach((panel) => {
                 panel.classList.remove('-open')
+            })
+
+            document.querySelectorAll('.c-popup').forEach((popup) => {
+                popup.classList.remove('-open')
             })
 
             document.querySelector(`[data-panel='${this.DOM.editions.getAttribute('data-background')}']`).classList.add('-open')
@@ -108,27 +125,24 @@ class App {
             e.preventDefault()
             e.stopPropagation()
 
-            this.DOM.books.classList.add('-blur')
+            this.DOM.books.classList.add("-open")
+            this.DOM.books.classList.remove("-animals")
             
             document.querySelectorAll('.c-panel').forEach((panel) => {
                 panel.classList.remove('-open')
             })
 
+            document.querySelectorAll('.c-popup').forEach((popup) => {
+                popup.classList.remove('-open')
+            })
+            
             this.DOM.markerContainer.classList.add('-open')
+            
         })
 
-        this.DOM.closeMarker.addEventListener('click', (e) => {
-            e.preventDefault()
-            e.stopPropagation()
-
-            this.DOM.books.classList.remove('-blur')
-
-            this.DOM.markerContainer.classList.remove('-open')
-        })
     }
 
     initGallery1() {
-        
         this.datas1 = [...this.DOM.tome1.querySelectorAll('[data-gallery-image]')]
         this.json1 = [];
         
@@ -148,7 +162,9 @@ class App {
         })
 
         this.datas1.forEach((item, index) => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
                 this.gallery1.openGallery(index)
             })
         })
@@ -174,11 +190,10 @@ class App {
             download: false
         })
 
-        
-
         this.datas2.forEach((item, index) => {
-            console.log(item)
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
                 this.gallery2.openGallery(index)
             })
         })
@@ -187,7 +202,8 @@ class App {
     open(el, index) {
         this.gallery.openGallery(index)
     }
-
 }
 
-new App()
+window.addEventListener("DOMContentLoaded", () => {
+    new App()
+})

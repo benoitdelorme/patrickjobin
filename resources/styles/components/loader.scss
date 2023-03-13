@@ -1,0 +1,25 @@
+.c-loader {
+    mask: url(/images/nature-sprite-2.png);
+    mask-size: 7100% 100%;
+
+    @apply
+        bg-neutral
+    ;
+}
+
+.c-loader.-hide {
+    animation: mask-play 1.4s steps(70) forwards;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+@keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+                mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+    }
+}

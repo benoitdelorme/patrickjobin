@@ -22,29 +22,9 @@
         {{ vite src="resources/scripts/app.js" }}
     </head>
     <body>
-        <div class="c-loader h-full w-full fixed top-0 left-0 z-[10000] bg-white flex flex-col justify-center items-center">
-            <div class="c-edition-loader absolute text-center leading-none top-10 left-[50%] translate-x-[-50%]">
-                <div class="c-edition-loader_text1 text-[18px] font-semibold">Les Éditions Patrick Jobin</div>
-                <div class="c-edition-loader_text2 text-[15px]">présente</div>
-            </div>
-            <div class="relative">
-                <h1 class="relative text-neutral text-xl md:text-5xl leading-[1.2em] font-writter font-light z-10 overflow-hidden">
-                    <span class="relative leading-none">
-                        <span class="firstname-wrapper relative leading-none inline-block">
-                            <span class="firstname relative leading-none inline-block">Patrick</span>
-                        </span>
-                        <span class="lastname-wrapper relative leading-none inline-block">
-                            <span class="lastname relative leading-none inline-block">Jobin</span>
-                        </span>
-                    </span>
-                </h1>
-                <p class="author text-neutral text-center text-sm md:text-xl md:mt-[-10px]">Auteur</p>
-            </div>
-            <button class="c-button enter cursor-pointer text-black mt-10 px-8 py-2 border-2 opacity-0 relative z-10 overflow-hidden rounded-lg">
-                <span>Bienvenue</span>
-            </button>
-            <video class="absolute top-0 left-0 z-[-1] w-full h-full bg-cover bg-center" muted autoplay style="mix-blend-mode: difference;" loop src="/videos/dust.mp4"></video>
-        </div>
+        
+        {{ partial:components/loader }}
+
         <main>
             {{ template_content }}
         </main>
