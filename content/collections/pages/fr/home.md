@@ -48,7 +48,7 @@ patrick_jobin_edition_description: |-
   Je vous invite donc à vous procurer mes deux premiers livres via la plateforme Amazon.ca et Amazon.fr, ainsi que dans tous les lieux locaux que je développerai au fil du temps. Vous trouverez la liste ici même de tous les emplacements qui s’ajouteront.
   <br><br>
   Merci de votre support et de vos encouragements! Patrick Jobin
-patrick_jobin_edition_email: 'mailto:patrick@gmail.com'
+patrick_jobin_edition_email: 'patrick@gmail.com'
 locations_list:
   -
     id: levk1nwo
