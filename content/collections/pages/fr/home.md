@@ -2,58 +2,65 @@
 id: ea0a8e75-62f5-4680-89dc-a4bd7ece8306
 blueprint: page
 title: Home
-updated_by: e0d6d9a3-b8b1-4b04-892a-b97240e572f4
-updated_at: 1678030717
+updated_by: 236953cd-cbd1-40b9-9a93-0de0856429ad
+updated_at: 1678211659
 template: default
 books:
   -
-    id: levhbewl
-    title: 'Un après midi'
-    subtitle: 'Tome 2 : Au coeur de nos actions'
-    description: 'Dans le second ouvrage, il est l’heure de bouger ! De mettre en action tout ce que l’on croit avoir compris. Seulement, tout ne se passe pas comme prévu. L’envie de foncer se heurte au passé ou sinon, semble encline à attendre que demain arrive. Comme si demain allait être mieux, Un après-midi brûlera sous le soleil, avec cette frustration, cette rage et cette damnée procrastination.'
-    cover: cover-tome-2-24x36.jpg
-    text_button_1: 'Commander sur Amazon Canada'
-    link_button_1: 'https://www.amazon.ca/apr%C3%A8s-midi-Contes-Po%C3%A8mes-Tome2/dp/2981976613'
-    text_button_2: 'Commander sur Amazon France'
-    link_button_2: 'https://www.amazon.fr/apr%C3%A8s-midi-Contes-Po%C3%A8mes-Tome2/dp/2981976613'
+    id: levhh85z
+    title: '- Un matin -'
+    subtitle: "Tome 1 : A l'aube de la réflexion"
+    description: "Je vous présente ici mon tout premier livre. Le premier d'un série qui en comptera cinq au final. La vie en vingt-quatre heures. Débutons par Un matin où l’on se lève pour tenter de comprendre qui l’on est, ce que l’on veut et de tout ce qui fait que nous sommes ici et pas ailleurs. Là où nos personnalités doivent parfois faire une mise au point et se dire leurs quatre vérités pour mieux avancer."
+    cover: cover-tome-1-24x36.jpg
+    text_button_1: 'Commandez sur Amazon Canada'
+    link_button_1: 'https://www.amazon.ca/matin-Contes-Po%C3%A8mes-Patrick-Jobin/dp/2981976605'
+    text_button_2: 'Commandez sur Amazon France'
+    link_button_2: 'https://www.amazon.fr/matin-Contes-Po%C3%A8mes-Patrick-Jobin/dp/2981976605'
     comments:
       -
-        id: levhdjet
-        image_comment: amazon1.png
+        id: levhjc4b
+        image_comment: commentaire-un-matin.png
         type: new_set
         enabled: true
     type: book
     enabled: true
   -
-    id: levhh85z
-    title: 'Un matin'
-    subtitle: "Tome 1 : A l'aube de la réflexion"
-    description: 'Débutons par Un matin où l’on se lève pour tenter de comprendre qui l’on est, ce que l’on veut et de tout ce qui fait que nous sommes ici et pas ailleurs. Là où nos personnalités doivent parfois faire une mise au point et se dire leurs quatre vérités pour mieux avancer.'
-    cover: cover-tome-1-24x36.jpg
-    text_button_1: 'Commander sur Amazon Canada'
-    link_button_1: 'https://www.amazon.ca/matin-Contes-Po%C3%A8mes-Patrick-Jobin/dp/2981976605'
-    text_button_2: 'Commander sur Amazon France'
-    link_button_2: 'https://www.amazon.fr/matin-Contes-Po%C3%A8mes-Patrick-Jobin/dp/2981976605'
+    id: levhbewl
+    title: '- Un après-midi -'
+    subtitle: 'Tome 2 : Au coeur de nos actions'
+    description: |-
+      Dans ce second ouvrage, il est l’heure de bouger ! De mettre en action tout ce que l’on croit avoir compris. Seulement, tout ne se passe pas comme prévu. L’envie de foncer se heurte au passé ou sinon, semble encline à attendre que demain arrive. Comme si demain allait être mieux, Un après-midi brûlera sous le soleil, avec cette frustration, cette rage et cette damnée procrastination.
+      <br><br>
+    cover: cover-tome-2-24x36.jpg
+    text_button_1: 'Commandez sur Amazon Canada'
+    link_button_1: 'https://www.amazon.ca/apr%C3%A8s-midi-Contes-Po%C3%A8mes-Tome2/dp/2981976613'
+    text_button_2: 'Commandez sur Amazon France'
+    link_button_2: 'https://www.amazon.fr/apr%C3%A8s-midi-Contes-Po%C3%A8mes-Tome2/dp/2981976613'
     comments:
       -
-        id: levhjc4b
-        image_comment: comment2.png
+        id: levhdjet
+        image_comment: commentaire-un-apres-midi.png
         type: new_set
         enabled: true
     type: book
     enabled: true
 patrick_jobin_edition_description: |-
+  Bonjour à vous tous!
+  <br><br>
   Ayant choisi l’autoédition, j’ai fondé les Éditions Patrick Jobin afin de faciliter la distribution de mes propres livres. J’y trouve dans cette forme, la liberté et toute l’autonomie recherchée. Par ailleurs, je dois bien avouer qu’il y avait là aussi un certain plaisir de relever un défi colossal d’ainsi me voir distribué un peu partout à l’échelle du Québec et peut-être même la France et d’autres régions du monde. Certes un rêve fou, mais une aventure palpitante.
   <br><br>
   Je vous invite donc à vous procurer mes deux premiers livres via la plateforme Amazon.ca et Amazon.fr, ainsi que dans tous les lieux locaux que je développerai au fil du temps. Vous trouverez la liste ici même de tous les emplacements qui s’ajouteront.
   <br><br>
   Merci de votre support et de vos encouragements! Patrick Jobin
-patrick_jobin_edition_email: 'mailto:patrick@gmail.com'
+  <br><br>
+  Pour toutes questions ou commentaires:
+  <br>
+      leseditionspatrickjobin@hotmail.com
 locations_list:
   -
     id: levk1nwo
     locations_list_image: amazon_icon.svg.png
-    locations_list_title: Commande
+    locations_list_title: 'Commande sur demande'
     locations_list_address: 'Disponible <br> en ligne'
     locations_list_link: 'https://www.amazon.ca/s?i=stripbooks&rh=p_27%3AM+Patrick+Jobin&s=relevancerank&language=fr&text=M+Patrick+Jobin&ref=dp_byline_sr_book_1'
     type: location
